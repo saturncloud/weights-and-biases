@@ -11,7 +11,7 @@ Weights and Biases can integrate with distributed training on Dask clusters.
 In this notebook, you'll train an image classifier with PyTorch and use Weights and Biases to
  monitor model performance.
 
-## [Use Pytorch on a single GPU](train-pytorch-cluster.ipynb)
+## [Train image classifier on cluster (PyTorch)](train-pytorch-cluster.ipynb)
 
 This notebook expands upon the image classifier training task, using a Dask cluster to accelerate
  the same task. Weights and Biases is still able to easily and clearly provide model performance monitoring.
