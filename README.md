@@ -36,7 +36,7 @@ To run these examples on Saturn Cloud, please follow these instructions.
        wandb login --relogin $WANDB_LOGIN
        ```
 
-6. **Optional: Create a Cluster**: If you plan to run the cluster based example, [create a cluster in the project](https://www.saturncloud.io/docs/getting-started/create_cluster_ui/) as well. Requesting at least 4 workers is recommended. 
+6. **Optional: Create a Cluster**: If you plan to run the cluster based example, [create a cluster in the project](https://www.saturncloud.io/docs/getting-started/create_cluster_ui/) as well. Requesting at least 3 workers is recommended. 
 7. **Start Resources**: Start the Jupyter Instance, and open the `git-repos` folder to see the scripts and run them!
 
 ***
