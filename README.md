@@ -25,13 +25,19 @@ To run these examples on Saturn Cloud, please follow these instructions.
 1. If you haven't already, [create a Saturn Cloud account and sign in](https://www.saturncloud.io/docs/getting-started/start_in_ten/). 
 2. Open the Repositories tab in the left side menu, and [add this repository to your account](https://www.saturncloud.io/docs/getting-started/gitrepo/). Mark the repo as read-only when creating it. **You do not need any SSH credentials, because this repo is public.**  
 3. Open the Credentials tab in the left side menu, and [add your Weights and Biases user token as an Environment Variable](https://www.saturncloud.io/docs/getting-started/credentials/). Name it `WANDB_LOGIN`. (This is the [same token you would use if you logged in to Weights and Biases](https://docs.wandb.ai/ref/cli/wandb-login) at the command line.)
-4. Create a project, using GPU instances and the `saturncloud/saturn-pytorch:2021.02.22` image. Add the following to your Start Script box, and make sure to attach the Repository you created in Step 2.
-```
-pip install wandb dask-pytorch-ddp
-wandb login --relogin $WANDB_LOGIN
-```
-5. If you plan to run the cluster based example, [create a cluster in the project](https://www.saturncloud.io/docs/getting-started/create_cluster_ui/) as well. Requesting at least 4 workers is recommended. 
-5. Start the Jupyter Instance, and open the `git-repos` folder to see the scripts and run them!
+4. [Create a custom project](https://www.saturncloud.io/docs/getting-started/start_project/#create-a-custom-project). The specifications we recommend are:
+ * T4 or V100 GPU instances
+ * The `saturncloud/saturn-pytorch:2021.02.22` image
+ * Keep default disk space and "Shutoff After" settings
+ * Make sure to attach the Repository you created in Step 2
+ * Add the following to your Advanced Settings > Start Script box.
+   ```
+   pip install wandb dask-pytorch-ddp
+   wandb login --relogin $WANDB_LOGIN
+   ```
+
+6. If you plan to run the cluster based example, [create a cluster in the project](https://www.saturncloud.io/docs/getting-started/create_cluster_ui/) as well. Requesting at least 4 workers is recommended. 
+7. Start the Jupyter Instance, and open the `git-repos` folder to see the scripts and run them!
 
 ***
 
