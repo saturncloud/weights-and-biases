@@ -18,6 +18,23 @@ This notebook expands upon the image classifier training task, using a Dask clus
 
 ***
 
+## How to Use
+
+To run these examples on Saturn Cloud, please follow these instructions.
+
+1. If you haven't already, [create a Saturn Cloud account and sign in](https://www.saturncloud.io/docs/getting-started/start_in_ten/). 
+2. Open the Repositories tab in the left side menu, and [add this repository to your account](https://www.saturncloud.io/docs/getting-started/gitrepo/). Mark the repo as read-only when creating it. **You do not need any SSH credentials, because this repo is public.**  
+3. Open the Credentials tab in the left side menu, and [add your Weights and Biases user token as an Environment Variable](https://www.saturncloud.io/docs/getting-started/credentials/). Name it `WANDB_LOGIN`. (This is the [same token you would use if you logged in to Weights and Biases](https://docs.wandb.ai/ref/cli/wandb-login) at the command line.)
+4. Create a project, using GPU instances and the `saturncloud/saturn-pytorch:2021.02.22` image. Add the following to your Start Script box, and make sure to attach the Repository you created in Step 2.
+```
+pip install wandb dask-pytorch-ddp
+wandb login --relogin $WANDB_LOGIN
+```
+5. If you plan to run the cluster based example, [create a cluster in the project](https://www.saturncloud.io/docs/getting-started/create_cluster_ui/) as well. Requesting at least 4 workers is recommended. 
+5. Start the Jupyter Instance, and open the `git-repos` folder to see the scripts and run them!
+
+***
+
 ## Next steps
 
 Thanks for trying out these examples! To learn more about how Saturn Cloud works, check out our  <a href="https://www.saturncloud.io/docs/" target='_blank' rel='noopener'>Documentation</a>, <a href="https://www.saturncloud.io/s/blog/" target='_blank' rel='noopener'>blog</a>, or join an  <a href="https://www.saturncloud.io/s/events/" target='_blank' rel='noopener'>upcoming event</a>. 
