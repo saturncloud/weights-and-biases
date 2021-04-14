@@ -23,7 +23,7 @@ This notebook expands upon the image classifier training task, using a Dask clus
 To run these examples on Saturn Cloud, please follow these instructions.
 
 1. **Create Account**: If you haven't already, [create a Saturn Cloud account and sign in](https://www.saturncloud.io/docs/getting-started/start_in_ten/). 
-2. **Connect This Repository**: Open the Repositories tab in the left side menu, and [add this repository to your account](https://www.saturncloud.io/docs/getting-started/gitrepo/). (The SSH link will be `git@github.com:saturncloud/weights-and-biases.git`.) Mark the repo as read-only when creating it.
+2. **Connect This Repository**: Clone this repository inside your Jupyter instance as you would in a local environment.
 3. **Add Weights and Biases Credential**: Open the Credentials tab in the left side menu, and [add your Weights and Biases user token as an Environment Variable](https://www.saturncloud.io/docs/getting-started/credentials/). Name it `WANDB_LOGIN`. (This is the [same token you would use if you logged in to Weights and Biases](https://docs.wandb.ai/ref/cli/wandb-login) at the command line.)
 4. **[Create a custom project](https://www.saturncloud.io/docs/getting-started/start_project/#create-a-custom-project)**: The specifications we recommend are:
      * T4 GPU instances
