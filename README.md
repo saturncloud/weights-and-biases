@@ -23,21 +23,20 @@ This notebook expands upon the image classifier training task, using a Dask clus
 To run these examples on Saturn Cloud, please follow these instructions.
 
 1. **Create Account**: If you haven't already, [create a Saturn Cloud account and sign in](https://www.saturncloud.io/docs/getting-started/start_in_ten/). 
-2. **Connect This Repository**: Clone this repository inside your Jupyter instance as you would in a local environment.
-3. **Add Weights and Biases Credential**: Open the Credentials tab in the left side menu, and [add your Weights and Biases user token as an Environment Variable](https://www.saturncloud.io/docs/getting-started/credentials/). Name it `WANDB_LOGIN`. (This is the [same token you would use if you logged in to Weights and Biases](https://docs.wandb.ai/ref/cli/wandb-login) at the command line.)
-4. **[Create a custom project](https://www.saturncloud.io/docs/getting-started/start_project/#create-a-custom-project)**: The specifications we recommend are:
+2. **Add Weights and Biases Credential**: Open the Credentials tab in the left side menu, and [add your Weights and Biases user token as an Environment Variable](https://www.saturncloud.io/docs/getting-started/credentials/). Name it `WANDB_LOGIN`. (This is the [same token you would use if you logged in to Weights and Biases](https://docs.wandb.ai/ref/cli/wandb-login) at the command line.)
+3. **[Create a custom project](https://www.saturncloud.io/docs/getting-started/start_project/#create-a-custom-project)**: The specifications we recommend are:
      * T4 GPU instances
      * The `saturncloud/saturn-pytorch:2021.02.22` image
      * Keep default disk space and "Shutoff After" settings
-     * Make sure to attach the Repository you created in Step 2
      * Add the following to your Advanced Settings > Start Script box.
        ```
        pip install wandb dask-pytorch-ddp
        wandb login --relogin $WANDB_LOGIN
        ```
 
-6. **Optional: Create a Cluster**: If you plan to run the cluster based example, [create a cluster in the project](https://www.saturncloud.io/docs/getting-started/create_cluster_ui/) as well. Requesting at least 3 workers is recommended. 
-7. **Start Resources**: Start the Jupyter Instance, and open the `git-repos` folder to see the scripts and run them!
+4. **Optional: Create a Cluster**: If you plan to run the cluster based example, [create a cluster in the project](https://www.saturncloud.io/docs/getting-started/create_cluster_ui/) as well. Requesting at least 3 workers is recommended. 
+5. **Start Resources**: Start the Jupyter Instance. Clone this repository inside your Jupyter instance at terminal, as you would in a local environment.
+
 
 ***
 
