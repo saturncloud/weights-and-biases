@@ -6,7 +6,7 @@ the training and performance of your machine learning models. We have included s
 training of an image classifier, as well as a multi-node example that lets you see how nicely 
 Weights and Biases can integrate with distributed training on Dask clusters. 
 
-## [Train image classifier on single node (PyTorch)](train-pytorch-local.ipynb)
+## [Train image classifier on single node (PyTorch)](train-pytorch-singlenode.ipynb)
 
 In this notebook, you'll train an image classifier with PyTorch and use Weights and Biases to
  monitor model performance.
